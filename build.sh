@@ -4,7 +4,7 @@
 errorCountCpp=0
 errorCountJava=0
 for fn in `find . -name "*.cpp" -cmin -1440`; do
-    g++ $fn
+    g++ -std=c++17 $fn
     if [ $? -eq 0 ]; then
         echo "$fn compiled successfully"
     else
